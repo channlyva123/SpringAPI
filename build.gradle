@@ -1,6 +1,6 @@
 plugins {
 	id 'java'
-	id 'war'
+	//id 'war'
 	id 'org.springframework.boot' version '4.0.1'
 	id 'io.spring.dependency-management' version '1.1.7'
 }
@@ -32,12 +32,14 @@ dependencies {
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'com.mysql:mysql-connector-j'
 	annotationProcessor 'org.projectlombok:lombok'
-	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat-runtime'
+	//providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat-runtime'
 	testImplementation 'org.springframework.boot:spring-boot-starter-data-jpa-test'
 	testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:3.0.0'
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	// PostgreSQL
+    runtimeOnly 'org.postgresql:postgresql:42.6.0'
 }
 
 tasks.named('test') {
